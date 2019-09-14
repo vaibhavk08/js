@@ -1,0 +1,9 @@
+age = prompt("enter your Age:");
+age = parseInt(age);
+if (age>30){
+  document.write("As  you are more the 30 year old, so you are 34 ")
+
+}
+else{
+  document.write("As you are not more than 30  yr old, so you are 29")
+}
