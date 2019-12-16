@@ -1,0 +1,21 @@
+var Trainer={
+  name: "ABC",
+  subjects:["Math", "physics","chemistry"],
+  teaches:["F", "S"],
+  age:60
+}
+var properties="";
+for(p in Trainer)
+{
+  properties+= p +" : "
+}
+console.log("before delete: "+properties);
+
+delete Trainer.age;
+
+properties="";
+for(p in Trainer)
+{
+  properties+= p +" : "
+}
+console.log("after delete: "+properties);
