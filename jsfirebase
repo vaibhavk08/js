@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+  
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD2jYEWIK3Vuik7OL8DjNlhAprRqiqilDI",
+    authDomain: "tutorial-5eb6d.firebaseapp.com",
+    databaseURL: "https://tutorial-5eb6d.firebaseio.com",
+    projectId: "tutorial-5eb6d",
+    storageBucket: "tutorial-5eb6d.appspot.com",
+    messagingSenderId: "7230002831",
+    appId: "1:7230002831:web:923919284e6a0027ac02fa"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  function writedata() {
+      firebase.database().ref("User").set{{
+          name: document.getElementById("namefield").value,
+          age: document.getElementById("agefeild").value
+      }
+
+      }
+  }
+</script>
+<body>
+  <h1>User Database</h1>
+  
+  <input type="text" placeholder="name" id="namefeild">
+  <input type="text" placeholder="age" id="agefeild">
+  <button onclick="writedata()">Submit</button>
+</body>
+</html>
